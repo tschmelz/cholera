@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<title></title>
+	<style>
+		rect{
+		}
+	</style>
+</head>
+<body>
+<svg width="400" height="400">
+		<rect id="bar1" x="50" y="50" width="20" height="100" fill="green"/>
+		<rect id="bar2" x="95" y="50" width="20" height="100" fill="black"/>
+		<rect id="bar3" x="140" y="50" width="20" height="100" fill="blue"/>
+		<line x1="40" x2="220" y1="150" y2="150" stroke="black"/>
+		<line x1="40" x2="40" y1="0" y2="150" stroke="black"/>
+		
+		<text x="50" y="170"> Cats</text>
+		<text x="95" y="170"> Dogs</text>
+		<text x="135" y="170"> Iguanas</text>
+		
+</svg>
+	<script type="text/javascript">
+		var CHART_HEIGHT = 150;
+		var pets = [45, 21, 102];
+		
+		var selection = d3.select('svg').selectAll('rect').data(pets)
+		selection.attr('height', function(d) { return (d/102) * CHART_HEIGHT; });
+		selection.attr('y', function(f) { return (1-(f)/102) *CHART_HEIGHT; });
+	</script>
+
+</body>
+</html>

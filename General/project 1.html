@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head> Project 1 
+</head>
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/queue.v1.min.js"></script>
+<script src="http://d3js.org/d3-queue.v3.min.js"></script>
+<script>
+type="text/javascript"
+</script>
+<svg> 
+<script>	
+
+
+queue()
+.defer (d3.json, "streets.json")
+.defer (d3.csv, "pumps.csv")
+.defer (d3.csv, "deathdays.csv")
+.defer (d3.csv, "deaths_age_sex.csv")
+.await(buildlist);
+
+function buildlist(streets, pumps, deathdays, deaths_age_sex) {
+for (i = 0; i < file.length; i++) 
+		var streetsdata= streets.json.parse[i];
+		//var pumps= arguments[i];
+		//var deathdays= arguments[i];
+		//var deaths_age_sex= arguments[i];
+
+	console.log(streetsdata);
+	console.log("yep");
+
+;}
+</script>
+
+
+
+
+</svg>
+</body>

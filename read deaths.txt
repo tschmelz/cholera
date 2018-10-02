@@ -1,0 +1,8 @@
+Pie Chart
+
+d3.csv("/data/deaths_age_sex.csv", function(data) {
+data.forEach(function(d) {
+d.gender=+d.gender;
+d.age=+d.age;});
+console.log(data);
+});
